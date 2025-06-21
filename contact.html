@@ -74,7 +74,7 @@
                     <h5 class="uppercase text-center">Let's work together!</h5>
 
                     <div class="center-form">
-                        <form>
+                        <form onsubmit="return sendMail(this);">
                             <input
                                 type="text"
                                 name="name"
@@ -85,7 +85,7 @@
                             />
                             <input
                                 type="email"
-                                name="email"
+                                name="emailaddress"
                                 id="emailaddress"
                                 class="form-control"
                                 placeholder="Email"
@@ -179,11 +179,12 @@
                 emailjs.init({
                     publicKey: 's67vAhEWhiQTX5QvN',
                 });
-                emailjs.send('service_q8oxyt6', 'template_7iohlkc', {
-                    name: 'Jarlath',
-                    notes: 'The project that I want is...',
-                });
+                // emailjs.send('service_q8oxyt6', 'template_7iohlkc', {
+                //     name: 'Jarlath',
+                //     notes: 'The project that I want is...',
+                // });
             })();
         </script>
+        <script src="assets/js/sendEmail.js"></script>
     </body>
 </html>
